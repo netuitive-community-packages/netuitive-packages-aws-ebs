@@ -1,0 +1,41 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Elevated Queue Length Differential with Elevated Latency",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "EBS",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "netuitive.aws.ebs.queuelengthdifferential",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.ebs.queuelengthdifferential",
+      "wildcard" : null,
+      "analytic" : "actual",
+      "operator" : ">",
+      "level" : 1.0
+    }, {
+      "metric" : "netuitive.aws.ebs.averagelatency",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 3
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}
