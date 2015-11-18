@@ -1,0 +1,80 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "AWS EBS",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "EBS",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "aws.ebs.*read.*",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : "aws.ebs.*write.*",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : "aws.ebs.volumeidletime",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : "aws.ebs.volumequeuelength",
+      "properties" : {
+        "STATISTIC" : "sum"
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.busypercent",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.iopsutilization",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "aws.ebs.volume.*time",
+      "properties" : {
+        "validMax" : 300
+      }
+    }, {
+      "match" : ".*aws.ebs\\..*percent.*",
+      "properties" : {
+        "validMax" : 100
+      }
+    }, {
+      "match" : "aws.ebs.volumereadbytes",
+      "properties" : {
+        "sparseDataStrategy" : "ReplaceWithZero"
+      }
+    }, {
+      "match" : "aws.ebs.volumetotalreadtime",
+      "properties" : {
+        "sparseDataStrategy" : "ReplaceWithZero"
+      }
+    }, {
+      "match" : "aws.ebs.volumetotalwritebytes",
+      "properties" : {
+        "sparseDataStrategy" : "ReplaceWithZero"
+      }
+    }, {
+      "match" : "aws.ebs.volumewritetime",
+      "properties" : {
+        "sparseDataStrategy" : "ReplaceWithZero"
+      }
+    } ]
+  }
+}

@@ -10,7 +10,7 @@
     },
     "distro" : {
       "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
-      "download" : null
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-aws-ebs/archive/master.zip"
     },
     "compatibility" : [ "AWS" ],
     "tags" : [ ],
@@ -23,5 +23,23 @@
       "content" : null
     }
   } ],
-  "analyticConfigurations" : [ ]
+  "analyticConfigurations" : [ {
+    "data" : {
+      "file" : "analyticConfigurations/ace-aws.ebs.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-aws.ebs.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-aws.ebs.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
 }
