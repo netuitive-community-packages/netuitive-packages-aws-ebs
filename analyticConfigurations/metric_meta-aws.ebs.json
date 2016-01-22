@@ -23,7 +23,7 @@
     }, {
       "match" : "aws.ebs.volumeidletime",
       "properties" : {
-        "STATISTIC" : "sum"
+        "validMax" : 300
       }
     }, {
       "match" : "aws.ebs.volumequeuelength",
@@ -44,11 +44,6 @@
           "utilization" : true
         },
         "validMax" : 100
-      }
-    }, {
-      "match" : "aws.ebs.volume.*time",
-      "properties" : {
-        "validMax" : 300
       }
     }, {
       "match" : ".*aws.ebs\\..*percent.*",
@@ -74,6 +69,11 @@
       "match" : "aws.ebs.volumewritetime",
       "properties" : {
         "sparseDataStrategy" : "ReplaceWithZero"
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.queuelengthdifferential",
+      "properties" : {
+        "validMin" : null
       }
     } ]
   }
