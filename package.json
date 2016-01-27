@@ -18,7 +18,7 @@
   },
   "policies" : [ {
     "data" : {
-      "file" : "policies/elevated.queue.length.differential.with.elevated.latency.json",
+      "file" : "policies/aws.ebs.-.elevated.queue.length.differential.with.elevated.latency.json",
       "encoding" : "application/json",
       "content" : null
     }
