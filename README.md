@@ -1,12 +1,11 @@
-netuitive.packages.aws.ebs 1.1.0
-----------------------
+#netuitive.packages.aws.ebs 1.1.0
 
-**Release History
+##Release History
 
-***Version 1.1.0
+###Version 1.1.0
 
-Added summary dashboard.
+* Added summary dashboard.
 
-***Version 1.0.0
+###Version 1.0.0
 
-Initial production release of the package for monitoring AWS Elastic Block Storage (EBS) resources.
+* Initial production release of the package for monitoring AWS Elastic Block Storage (EBS) resources.
