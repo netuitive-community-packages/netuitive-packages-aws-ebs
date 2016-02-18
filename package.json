@@ -42,5 +42,11 @@
       "content" : null
     }
   } ],
-  "dashboards" : [ ]
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/aws.ebs.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
 }
