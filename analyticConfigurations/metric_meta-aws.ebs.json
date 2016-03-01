@@ -23,6 +23,9 @@
     }, {
       "match" : "aws.ebs.volumeidletime",
       "properties" : {
+        "tags" : {
+          "unit" : "s"
+        },
         "validMax" : 300
       }
     }, {
@@ -34,14 +37,16 @@
       "match" : "netuitive.aws.ebs.busypercent",
       "properties" : {
         "tags" : {
-          "utilization" : true
+          "utilization" : true,
+          "unit" : "percent"
         }
       }
     }, {
       "match" : "netuitive.aws.ebs.iopsutilization",
       "properties" : {
         "tags" : {
-          "utilization" : true
+          "utilization" : true,
+          "unit" : "percent"
         },
         "validMax" : 100
       }
@@ -53,27 +58,95 @@
     }, {
       "match" : "aws.ebs.volumereadbytes",
       "properties" : {
-        "sparseDataStrategy" : "ReplaceWithZero"
+        "sparseDataStrategy" : "ReplaceWithZero",
+        "tags" : {
+          "unit" : "bytes"
+        }
       }
     }, {
       "match" : "aws.ebs.volumetotalreadtime",
       "properties" : {
-        "sparseDataStrategy" : "ReplaceWithZero"
+        "sparseDataStrategy" : "ReplaceWithZero",
+        "tags" : {
+          "unit" : "s"
+        }
       }
     }, {
       "match" : "aws.ebs.volumetotalwritebytes",
       "properties" : {
-        "sparseDataStrategy" : "ReplaceWithZero"
+        "sparseDataStrategy" : "ReplaceWithZero",
+        "tags" : {
+          "unit" : "bytes"
+        }
       }
     }, {
       "match" : "aws.ebs.volumewritetime",
       "properties" : {
-        "sparseDataStrategy" : "ReplaceWithZero"
+        "sparseDataStrategy" : "ReplaceWithZero",
+        "tags" : {
+          "unit" : "s"
+        }
       }
     }, {
       "match" : "netuitive.aws.ebs.queuelengthdifferential",
       "properties" : {
         "validMin" : null
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.totalbytes",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "aws.ebs.volumethroughputpercentage",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.*latency",
+      "properties" : {
+        "tags" : {
+          "unit" : "s"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.*bytespersec",
+      "properties" : {
+        "tags" : {
+          "unit" : "Bps"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.*iops",
+      "properties" : {
+        "tags" : {
+          "unit" : "iops"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.readopspersec",
+      "properties" : {
+        "tags" : {
+          "unit" : "rps"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.writeopspersec",
+      "properties" : {
+        "tags" : {
+          "unit" : "wps"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.ebs.busytimebytespersecond",
+      "properties" : {
+        "tags" : {
+          "unit" : "Bps"
+        }
       }
     } ]
   }

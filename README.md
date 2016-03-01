@@ -1,6 +1,10 @@
-#netuitive.packages.aws.ebs 1.1.0
+#netuitive.packages.aws.ebs 1.2.0
 
 ##Release History
+
+###Version 1.2.0
+
+* Added units to metrics.
 
 ###Version 1.1.0
 
