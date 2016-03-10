@@ -277,7 +277,7 @@
       "created" : "2016-03-10T20:08:13Z",
       "updated" : "2016-03-10T20:08:13Z"
     } ],
-    "type" : "DEFAULT",
+    "type" : "EBS",
     "private" : false
   }
 }
