@@ -1,6 +1,10 @@
-#netuitive.packages.aws.ebs 1.2.0
+#netuitive.packages.aws.ebs 1.3.0
 
 ##Release History
+
+###Version 1.3.0
+
+* Added EBS-specific element detail summary page.
 
 ###Version 1.2.0
 
