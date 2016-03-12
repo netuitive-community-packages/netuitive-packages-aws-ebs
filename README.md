@@ -4,7 +4,8 @@
 
 ###Version 1.3.0
 
-* Added EBS-specific element detail summary page.
+* Added EBS-specific element detail page.
+* Changed "sum" to "avg" on summary dashboard widgets.
 
 ###Version 1.2.0
 
