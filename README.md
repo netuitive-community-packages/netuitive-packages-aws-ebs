@@ -1,6 +1,11 @@
-#netuitive.packages.aws.ebs 1.2.0
+#netuitive.packages.aws.ebs 1.3.0
 
 ##Release History
+
+###Version 1.3.0
+
+* Added EBS-specific element detail page.
+* Changed "sum" to "avg" on summary dashboard widgets.
 
 ###Version 1.2.0
 
