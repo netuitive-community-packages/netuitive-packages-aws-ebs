@@ -15,8 +15,8 @@
     "tenantId" : null,
     "userId" : null,
     "creatorEmail" : null,
-    "created" : "2016-03-10T23:51:18Z",
-    "updated" : "2016-03-10T23:51:18Z",
+    "created" : "2016-03-17T13:50:27Z",
+    "updated" : "2016-03-17T13:50:27Z",
     "widgets" : [ {
       "id" : "2d1d7ed4-2474-3a58-b001-d5efb69ee533",
       "name" : "Top 10 Average Write Latency",
@@ -40,28 +40,8 @@
       },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-10T23:51:18Z",
-      "updated" : "2016-03-10T23:51:18Z"
-    }, {
-      "id" : "b012d680-5eef-3ccb-805f-1e2c30935ee8",
-      "name" : "EBS Data",
-      "description" : null,
-      "widgetType" : "multi-metric-table",
-      "properties" : {
-        "showHighest" : "true",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[{\"name\":\"availabilityZone\"},{\"name\":\"region\"},{\"name\":\"size\"}]",
-        "useElementNameContains" : "true",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"netuitive.aws.ebs.totalops\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.totalbytespersec\",\"aggFn\":\"sum\"}]",
-        "metricLimit" : "10",
-        "elementScopeTypes" : "[\"EBS\"]",
-        "selectedTab" : "table"
-      },
-      "dashboardId" : null,
-      "userId" : null,
-      "created" : "2016-03-10T23:51:18Z",
-      "updated" : "2016-03-10T23:51:18Z"
+      "created" : "2016-03-17T13:50:27Z",
+      "updated" : "2016-03-17T13:50:27Z"
     }, {
       "id" : "d95162e3-65bc-34d8-9499-ef439e74a9ec",
       "name" : "EBS Metric Aggregation",
@@ -90,8 +70,28 @@
       },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-10T23:51:18Z",
-      "updated" : "2016-03-11T16:38:51Z"
+      "created" : "2016-03-17T13:50:27Z",
+      "updated" : "2016-03-17T13:50:27Z"
+    }, {
+      "id" : "b012d680-5eef-3ccb-805f-1e2c30935ee8",
+      "name" : "EBS Data",
+      "description" : null,
+      "widgetType" : "multi-metric-table",
+      "properties" : {
+        "showHighest" : "true",
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[{\"name\":\"availabilityZone\"},{\"name\":\"region\"},{\"name\":\"size\"}]",
+        "useElementNameContains" : "true",
+        "width" : "auto",
+        "metrics" : "[{\"fqn\":\"netuitive.aws.ebs.totalops\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.totalbytespersec\",\"aggFn\":\"sum\"}]",
+        "metricLimit" : "10",
+        "elementScopeTypes" : "[\"EBS\"]",
+        "selectedTab" : "table"
+      },
+      "dashboardId" : null,
+      "userId" : null,
+      "created" : "2016-03-17T13:50:27Z",
+      "updated" : "2016-03-17T13:50:27Z"
     }, {
       "id" : "87088b89-a7fd-3bc6-8f9f-9387c2a5da6e",
       "name" : "Top 10 Average Read Latency",
@@ -115,8 +115,8 @@
       },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-10T23:51:18Z",
-      "updated" : "2016-03-10T23:51:18Z"
+      "created" : "2016-03-17T13:50:28Z",
+      "updated" : "2016-03-17T13:50:28Z"
     }, {
       "id" : "f6158eb3-5296-383b-b5c1-15dead605f70",
       "name" : "Top 5 IOPS Utilization",
@@ -140,8 +140,8 @@
       },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-10T23:51:18Z",
-      "updated" : "2016-03-10T23:51:18Z"
+      "created" : "2016-03-17T13:50:28Z",
+      "updated" : "2016-03-17T13:50:28Z"
     }, {
       "id" : "45e7cb6c-8b34-3326-a649-0456eb00da38",
       "name" : "Top 5 Total Bytes per Second",
@@ -165,8 +165,8 @@
       },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-10T23:51:18Z",
-      "updated" : "2016-03-10T23:51:18Z"
+      "created" : "2016-03-17T13:50:28Z",
+      "updated" : "2016-03-17T13:50:28Z"
     }, {
       "id" : "14d5a47b-0a48-39e4-ac6e-3e4843324dfd",
       "name" : "Top 10 Total IOPS",
@@ -186,8 +186,8 @@
       },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-10T23:51:18Z",
-      "updated" : "2016-03-10T23:51:18Z"
+      "created" : "2016-03-17T13:50:28Z",
+      "updated" : "2016-03-17T13:50:28Z"
     } ],
     "type" : "DEFAULT",
     "private" : false
