@@ -5,6 +5,9 @@
     "description" : "This policy looks at two Netuitive computed metrics: Queue Length Differential, and Average Latency. Average Latency is straightforward, representing the average amount of time that it takes for a disk operation to complete. Queue Length Differential measures the difference between the actual disk queue length and the \"ideal\" disk queue length. The ideal queue length is based on Amazon's rule of thumb that for every 200 IOPS you should have a queue length of 1. In theory, a well-optimized volume should have a queue length differential that tends to hover around 0. In practice, we have seen volumes with extremely low latency (< 0.0001) have queue length differentials that are higher than 0; presumably this is because the latency is much lower than Amazon is assuming for their rule of thumb. Even in these cases, the differential is a pretty steady number.\n\nBecause the differential tends to be steady, one condition of the policy looks for an upper deviation as the first indication that the disk may be getting more traffic than it can keep up with.  It also checks for the differential to be greater than 1 in order to avoid false alarming in cases where the differential is very low.\n\nThe other condition is looking at average latency, because an elevated queue differential by itself is not necessarily a bad thing. It means you are queueing at a higher rate than is suggested by Amazon's rule of thumb, but again, if your latency is low enough, this is ok. Thus, we only want to alarm if your differential is higher than normal AND your latency is higher than normal.\n\nFor more information, please refer to our blog entry: http://www.netuitive.com/detecting-performance-issues-on-ebs-volumes/",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "EBS",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "netuitive.aws.ebs.averagelatency",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null,
@@ -21,6 +25,7 @@
     }, {
       "metric" : "netuitive.aws.ebs.queuelengthdifferential",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null,
@@ -30,6 +35,7 @@
     }, {
       "metric" : "netuitive.aws.ebs.queuelengthdifferential",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",
       "level" : 1.0,
@@ -37,6 +43,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 3
