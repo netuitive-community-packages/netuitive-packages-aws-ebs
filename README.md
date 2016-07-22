@@ -1,8 +1,12 @@
-#netuitive.packages.aws.ebs 1.3.1
+#netuitive.packages.aws.ebs 1.3.2
 
 ##Release History
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
+
+###Version 1.3.2
+
+* Bug fix for the multi-metric widgets on the element detail page.
 
 ###Version 1.3.1
 
