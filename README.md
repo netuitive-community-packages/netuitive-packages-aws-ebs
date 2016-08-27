@@ -1,8 +1,12 @@
-#netuitive.packages.aws.ebs 1.3.2
+#netuitive.packages.aws.ebs 1.3.3
 
 ##Release History
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
+
+###Version 1.3.3
+
+* Updated package compatibilities.
 
 ###Version 1.3.2
 
