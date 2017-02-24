@@ -1,8 +1,12 @@
-#netuitive.packages.aws.ebs 1.3.3
+#netuitive.packages.aws.ebs 1.4.0
 
 ##Release History
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
+
+###Version 1.4.0
+
+* Updated dashboard layouts for gridstack
 
 ###Version 1.3.3
 
