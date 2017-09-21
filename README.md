@@ -1,8 +1,13 @@
-# netuitive.packages.aws.ebs 1.4.0
+# netuitive.packages.aws.ebs
 
 ## Release History
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
+
+### Version next
+
+* Update to Element Details dashboard layout
+* Update to Summary dashboard widgets
 
 ### Version 1.4.0
 
