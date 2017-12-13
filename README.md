@@ -4,6 +4,10 @@
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
+### Version next
+
+* Add the depleted burst balance and high IOPS utilization policy
+
 ### Version 1.5.0
 
 * Update to Element Details dashboard layout
