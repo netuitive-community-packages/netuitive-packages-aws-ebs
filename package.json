@@ -22,6 +22,12 @@
       "encoding" : "application/json",
       "content" : null
     }
+  }, {
+    "data" : {
+      "file" : "policies/aws.ebs.-.elevated.iops.utilization.low.burst.balance.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
   } ],
   "analyticConfigurations" : [ {
     "data" : {
