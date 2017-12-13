@@ -6,6 +6,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Changed the scope element type to an array
 * Add the depleted burst balance and high IOPS utilization policy
 
 ### Version 1.5.0
