@@ -1,0 +1,32 @@
+{
+  "policy" : {
+    "name": "AWS EBS - Depleted Burst Balance and High IOPS Utilization",
+    "description": "This policy looks at two metrics: IOPS Utilizaton and EBS Burst Balance. High IOPS Utilization (a Metricly computed metric) indicates the disk is highly utilized and a low EBS Burst Balance indicates the disk is so highly utilized that most of the burst available to the disk is depleted. Once the burst balance is fully depleted available disk IOPS will fall causing slowdowns in I/O and deteriorated performance of the application using the volume.\n\nCheck this volume and the application using it to see if the I/O profile has changed. Consider using Provisioned IOPS to increase the disk performance if this new profile is normal.",
+    "scope": {
+      "elementTypes": ["EBS"]
+    },
+    "duration": 300,
+    "conditions": [
+      {
+        "metric": "netuitive.aws.ebs.iopsutilization",
+        "analytic": "actual",
+        "operator": ">=",
+        "level": 90
+      },
+      {
+        "metric": "aws.ebs.burstbalance",
+        "analytic": "actual",
+        "operator": "<=",
+        "level": 10
+      }
+    ],
+    "actions": [
+      {
+        "type": "event",
+        "category": 2
+      }
+    ],
+    "enabled": true,
+    "deleted": false
+  }
+}
