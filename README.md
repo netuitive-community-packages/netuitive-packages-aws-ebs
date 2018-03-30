@@ -6,6 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Adjusted build to use metricly-cli for validation
+
 ### Version 1.6.0
 
 * Changed the scope element type to an array
