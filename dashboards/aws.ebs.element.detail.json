@@ -1,304 +1,173 @@
 {
-  "dashboard" : {
-    "name" : "AWS EBS Element Detail",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"c6711eb7-9b6f-4ddd-a0ff-aba56593db7e\",\"x\":0,\"y\":27,\"width\":6,\"height\":9},{\"id\":\"ecd11a31-63fb-4e2a-8330-1ad463dd1c71\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"6775880c-c981-4580-bc71-31f184b55076\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"7b43c90c-4c85-4018-bd92-0e131d3f4d7e\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"6c4fc7a3-8354-4f6a-94c4-55f66688ca43\",\"x\":0,\"y\":36,\"width\":12,\"height\":9},{\"id\":\"538b8d6c-d89f-4cf6-b086-ae2a1681d9a3\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"e3ec88be-cd6b-43d5-b1e5-b023eaf2524c\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"dbb82c0b-590c-4eb3-ace4-fbb64bd98487\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"b10784ea-2f4a-4d58-a8ee-a66d3c87124d\",\"x\":0,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"7d26a7fa-880b-4cec-899e-194bf1810b82\",\"x\":6,\"y\":27,\"width\":6,\"height\":9},{\"id\":\"9b975536-6c30-481b-9fd0-f43031f36e5b\",\"x\":0,\"y\":0,\"width\":4,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS EBS Element Detail",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"c6711eb7-9b6f-4ddd-a0ff-aba56593db7e\",\"x\":0,\"y\":27,\"width\":6,\"height\":9},{\"id\":\"ecd11a31-63fb-4e2a-8330-1ad463dd1c71\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"6775880c-c981-4580-bc71-31f184b55076\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"7b43c90c-4c85-4018-bd92-0e131d3f4d7e\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"6c4fc7a3-8354-4f6a-94c4-55f66688ca43\",\"x\":0,\"y\":36,\"width\":12,\"height\":9},{\"id\":\"538b8d6c-d89f-4cf6-b086-ae2a1681d9a3\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"e3ec88be-cd6b-43d5-b1e5-b023eaf2524c\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"dbb82c0b-590c-4eb3-ace4-fbb64bd98487\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"b10784ea-2f4a-4d58-a8ee-a66d3c87124d\",\"x\":0,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"7d26a7fa-880b-4cec-899e-194bf1810b82\",\"x\":6,\"y\":27,\"width\":6,\"height\":9},{\"id\":\"9b975536-6c30-481b-9fd0-f43031f36e5b\",\"x\":0,\"y\":0,\"width\":4,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "c6711eb7-9b6f-4ddd-a0ff-aba56593db7e",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
+    "type": "EBS",
+    "widgets": [
+      {
+        "id": "c6711eb7-9b6f-4ddd-a0ff-aba56593db7e",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "ecd11a31-63fb-4e2a-8330-1ad463dd1c71",
+        "name": "IOPS Utilization",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.iopsutilization",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "6775880c-c981-4580-bc71-31f184b55076",
+        "name": "Average Latency",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.averagelatency",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "7b43c90c-4c85-4018-bd92-0e131d3f4d7e",
+        "name": "Queue Length Differential",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.queuelengthdifferential",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "6c4fc7a3-8354-4f6a-94c4-55f66688ca43",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "false",
+          "useAllMetricScopeTags": "false",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "event-ticker"
+      },
+      {
+        "id": "538b8d6c-d89f-4cf6-b086-ae2a1681d9a3",
+        "name": "IOPS",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.iops",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "e3ec88be-cd6b-43d5-b1e5-b023eaf2524c",
+        "name": "Busy Time IOPS",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.busytimeiops",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "dbb82c0b-590c-4eb3-ace4-fbb64bd98487",
+        "name": "Busy Percent",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.busypercent",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "b10784ea-2f4a-4d58-a8ee-a66d3c87124d",
+        "name": "Reads and Writes Per Second",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"netuitive.aws.ebs.writeopspersec\",\"aggFns\":[]},{\"fqn\":\"netuitive.aws.ebs.readopspersec\",\"aggFns\":[]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "false",
+          "useAllMetricScopeTags": "false",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "stacked-area"
+      },
+      {
+        "id": "7d26a7fa-880b-4cec-899e-194bf1810b82",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "element-tags"
+      },
+      {
+        "id": "9b975536-6c30-481b-9fd0-f43031f36e5b",
+        "name": "Current IOPS Utilization",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.iopsutilization",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "medium"
+        },
+        "widgetType": "metric-status"
       }
-    }, {
-      "id" : "ecd11a31-63fb-4e2a-8330-1ad463dd1c71",
-      "name" : "IOPS Utilization",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.iopsutilization",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "6775880c-c981-4580-bc71-31f184b55076",
-      "name" : "Average Latency",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.averagelatency",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "7b43c90c-4c85-4018-bd92-0e131d3f4d7e",
-      "name" : "Queue Length Differential",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.queuelengthdifferential",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "6c4fc7a3-8354-4f6a-94c4-55f66688ca43",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "false",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EBS\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "false",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "538b8d6c-d89f-4cf6-b086-ae2a1681d9a3",
-      "name" : "IOPS",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.iops",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "e3ec88be-cd6b-43d5-b1e5-b023eaf2524c",
-      "name" : "Busy Time IOPS",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.busytimeiops",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "dbb82c0b-590c-4eb3-ace4-fbb64bd98487",
-      "name" : "Busy Percent",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.busypercent",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "b10784ea-2f4a-4d58-a8ee-a66d3c87124d",
-      "name" : "Reads and Writes Per Second",
-      "description" : null,
-      "widgetType" : "stacked-area",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "false",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EBS\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "false",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"netuitive.aws.ebs.writeopspersec\",\"aggFns\":[]},{\"fqn\":\"netuitive.aws.ebs.readopspersec\",\"aggFns\":[]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "7d26a7fa-880b-4cec-899e-194bf1810b82",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "9b975536-6c30-481b-9fd0-f43031f36e5b",
-      "name" : "Current IOPS Utilization",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.iopsutilization",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "EBS",
-    "private" : false
+    ]
   }
 }
