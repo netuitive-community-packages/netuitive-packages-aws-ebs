@@ -90,7 +90,10 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.queuelengthdifferential"
+        "match": "netuitive.aws.ebs.queuelengthdifferential",
+        "properties": {
+          "validMin": "null"
+        }
       },
       {
         "match": "netuitive.aws.ebs.totalbytes",
