@@ -6,6 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+### Version 1.7.0
+
 * Adjusted build to use metricly-cli for validation
 * Convert most computed metrics to new format
 * Fix bad merge that removed validMin setting from queuelengthdifferential
