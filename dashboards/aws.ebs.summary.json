@@ -1,140 +1,109 @@
 {
-  "dashboard" : {
-    "name" : "AWS EBS Summary",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"3e21517d-e8d9-4363-a04d-a907394f4c36\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"b8a2cad0-cfdd-4b95-bc11-6d5dacac48a8\",\"x\":0,\"y\":9,\"width\":12,\"height\":9},{\"id\":\"ad83d44e-5910-4e47-b803-d3f543c76668\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"475ac827-d1b6-4c27-8097-048c95ebe63e\",\"x\":8,\"y\":18,\"width\":4,\"height\":9},{\"id\":\"ed74323e-3ea4-473c-8edf-d911cadd154a\",\"x\":0,\"y\":18,\"width\":4,\"height\":9},{\"id\":\"a5279ef8-b608-4d31-a421-c9b459a529fe\",\"x\":4,\"y\":18,\"width\":4,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS EBS Summary",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"3e21517d-e8d9-4363-a04d-a907394f4c36\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"b8a2cad0-cfdd-4b95-bc11-6d5dacac48a8\",\"x\":0,\"y\":9,\"width\":12,\"height\":9},{\"id\":\"ad83d44e-5910-4e47-b803-d3f543c76668\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"475ac827-d1b6-4c27-8097-048c95ebe63e\",\"x\":8,\"y\":18,\"width\":4,\"height\":9},{\"id\":\"ed74323e-3ea4-473c-8edf-d911cadd154a\",\"x\":0,\"y\":18,\"width\":4,\"height\":9},{\"id\":\"a5279ef8-b608-4d31-a421-c9b459a529fe\",\"x\":4,\"y\":18,\"width\":4,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "3e21517d-e8d9-4363-a04d-a907394f4c36",
-      "name" : "Top 5 Total Bytes per Second",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "metricLimit" : "5",
-        "elementScopeTypes" : "[\"EBS\"]",
-        "metricUnit" : null,
-        "groupName" : null,
-        "showHighest" : "true",
-        "elementNameContains" : null,
-        "metric_fqn" : "netuitive.aws.ebs.totalbytespersec",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
+    "type": "DEFAULT",
+    "widgets": [
+      {
+        "id": "3e21517d-e8d9-4363-a04d-a907394f4c36",
+        "name": "Top 5 Total Bytes per Second",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricLimit": "5",
+          "metric_fqn": "netuitive.aws.ebs.totalbytespersec",
+          "selectedTab": "graph",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "b8a2cad0-cfdd-4b95-bc11-6d5dacac48a8",
+        "name": "EBS Data",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"netuitive.aws.ebs.totalops\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.totalbytespersec\",\"aggFn\":\"sum\"}]",
+          "selectedAttributes": "[{\"name\":\"availabilityZone\"},{\"name\":\"region\"},{\"name\":\"size\"}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "multi-metric-table"
+      },
+      {
+        "id": "ad83d44e-5910-4e47-b803-d3f543c76668",
+        "name": "Top 5 IOPS Utilization",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricAgg": "avg",
+          "metricLimit": "5",
+          "metric_fqn": "netuitive.aws.ebs.iopsutilization",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "tableColumns": "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricUnit\":null}]",
+          "useAllElementScopeAttributes": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "visualization": "bar"
+        },
+        "widgetType": "metric-range"
+      },
+      {
+        "id": "475ac827-d1b6-4c27-8097-048c95ebe63e",
+        "name": "Top 10 Total IOPS",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.totalops",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "ed74323e-3ea4-473c-8edf-d911cadd154a",
+        "name": "Top 10 Average Read Latency",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.averagereadlatency",
+          "selectedTab": "graph",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "a5279ef8-b608-4d31-a421-c9b459a529fe",
+        "name": "Top 10 Average Write Latency",
+        "properties": {
+          "elementScopeTypes": "[\"EBS\"]",
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.ebs.averagewritelatency",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "high-low-metric"
       }
-    }, {
-      "id" : "b8a2cad0-cfdd-4b95-bc11-6d5dacac48a8",
-      "name" : "EBS Data",
-      "description" : null,
-      "widgetType" : "multi-metric-table",
-      "properties" : {
-        "showHighest" : "true",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[{\"name\":\"availabilityZone\"},{\"name\":\"region\"},{\"name\":\"size\"}]",
-        "useElementNameContains" : "true",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"netuitive.aws.ebs.totalops\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.totalbytespersec\",\"aggFn\":\"sum\"}]",
-        "metricLimit" : "10",
-        "elementScopeTypes" : "[\"EBS\"]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "ad83d44e-5910-4e47-b803-d3f543c76668",
-      "name" : "Top 5 IOPS Utilization",
-      "description" : null,
-      "widgetType" : "metric-range",
-      "properties" : {
-        "visualization" : "bar",
-        "tableColumns" : "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricUnit\":null}]",
-        "showElementTotal" : "true",
-        "elementScopeTags" : "[]",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"EBS\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.iopsutilization",
-        "metricScopeTags" : "[]",
-        "useAllElementScopeAttributes" : "true",
-        "metricAgg" : "avg",
-        "metrics" : "[]"
-      }
-    }, {
-      "id" : "475ac827-d1b6-4c27-8097-048c95ebe63e",
-      "name" : "Top 10 Total IOPS",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.ebs.totalops",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "useElementNameContains" : "true",
-        "width" : "auto",
-        "metrics" : "[]",
-        "metricLimit" : "10",
-        "elementScopeTypes" : "[\"EBS\"]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "ed74323e-3ea4-473c-8edf-d911cadd154a",
-      "name" : "Top 10 Average Read Latency",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "metricLimit" : "10",
-        "elementScopeTypes" : "[\"EBS\"]",
-        "metricUnit" : null,
-        "groupName" : null,
-        "showHighest" : "true",
-        "elementNameContains" : null,
-        "metric_fqn" : "netuitive.aws.ebs.averagereadlatency",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    }, {
-      "id" : "a5279ef8-b608-4d31-a421-c9b459a529fe",
-      "name" : "Top 10 Average Write Latency",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "metricLimit" : "10",
-        "elementScopeTypes" : "[\"EBS\"]",
-        "metricUnit" : null,
-        "groupName" : null,
-        "showHighest" : "true",
-        "elementNameContains" : null,
-        "metric_fqn" : "netuitive.aws.ebs.averagewritelatency",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "DEFAULT",
-    "private" : false
+    ]
   }
 }
