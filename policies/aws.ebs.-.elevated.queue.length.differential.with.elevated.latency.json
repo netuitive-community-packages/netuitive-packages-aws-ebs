@@ -2,7 +2,7 @@
   "policy": {
     "actions": [
       {
-        "category": 3,
+        "category": 2,
         "type": "event"
       },
       {
