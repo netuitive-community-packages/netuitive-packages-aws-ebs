@@ -2,6 +2,8 @@
 
 ### Version next
 
+* aws.ebs.elevated.queue.length policy has been split into 2 policies to separate critical and warning thresholds
+
 ### Version 1.7.0
 
 * Adjusted build to use metricly-cli for validation
