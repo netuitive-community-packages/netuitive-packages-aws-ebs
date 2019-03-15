@@ -29,9 +29,9 @@
         "operator": ">"
       },
       {
-        "metric": "cpu.total.iowait",
-        "level": 8,
         "analytic": "actual",
+        "level": 8,
+        "metric": "cpu.total.iowait",
         "operator": ">"
       }
     ],
