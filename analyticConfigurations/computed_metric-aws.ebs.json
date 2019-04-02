@@ -23,16 +23,6 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.readbytespersec",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumereadbytes}.actual / 300.0"
-          ],
-          "fqn": "netuitive.aws.ebs.readbytespersec",
-          "name": "Read Bytes Per Second"
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.averagereadlatency",
         "properties": {
           "expressions": [
@@ -115,7 +105,7 @@
         "match": "netuitive.aws.ebs.totalbytespersec",
         "properties": {
           "expressions": [
-            "${netuitive.aws.ebs.readbytespersec}.actual + ${aws.ebs.volumewritebytes}.actual / 300.0"
+            "(${aws.ebs.volumereadbytes}.actual + ${aws.ebs.volumewritebytes}.actual) / 300.0"
           ],
           "fqn": "netuitive.aws.ebs.totalbytespersec",
           "name": "Total Bytes Per Second"
