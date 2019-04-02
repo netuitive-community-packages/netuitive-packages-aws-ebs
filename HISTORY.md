@@ -1,6 +1,7 @@
 ## Release History
 
 ### Version next
+* Remove unused metrics: netuitive.aws.ebs.busytimebytespersecond, netuitive.aws.ebs.writebytespersec                         
 
 ### Version 1.7.0
 

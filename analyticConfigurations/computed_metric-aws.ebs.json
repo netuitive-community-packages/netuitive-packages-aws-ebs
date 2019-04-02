@@ -33,16 +33,6 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.writebytespersec",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumewritebytes}.actual / 300.0"
-          ],
-          "fqn": "netuitive.aws.ebs.writebytespersec",
-          "name": "Write Bytes Per Second"
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.averagereadlatency",
         "properties": {
           "expressions": [
@@ -125,7 +115,7 @@
         "match": "netuitive.aws.ebs.totalbytespersec",
         "properties": {
           "expressions": [
-            "${netuitive.aws.ebs.readbytespersec}.actual + ${netuitive.aws.ebs.writebytespersec}.actual"
+            "${netuitive.aws.ebs.readbytespersec}.actual + ${aws.ebs.volumewritebytes}.actual / 300.0"
           ],
           "fqn": "netuitive.aws.ebs.totalbytespersec",
           "name": "Total Bytes Per Second"
@@ -139,14 +129,6 @@
           ],
           "fqn": "netuitive.aws.ebs.totalbytes",
           "name": "Total Bytes"
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.busytimebytespersecond",
-        "properties": {
-          "expression": "(data['aws.ebs.volumeidletime'].actual >= 300) ? 0 : data['netuitive.aws.ebs.totalbytes'].actual / (300.0 - Math.floor(data['aws.ebs.volumeidletime'].actual))",
-          "fqn": "netuitive.aws.ebs.busytimebytespersecond",
-          "name": "Busy Time Bytes Per Second"
         }
       },
       {

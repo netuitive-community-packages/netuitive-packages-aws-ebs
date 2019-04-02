@@ -150,14 +150,6 @@
             "unit": "wps"
           }
         }
-      },
-      {
-        "match": "netuitive.aws.ebs.busytimebytespersecond",
-        "properties": {
-          "tags": {
-            "unit": "Bps"
-          }
-        }
       }
     ],
     "name": "AWS EBS",
