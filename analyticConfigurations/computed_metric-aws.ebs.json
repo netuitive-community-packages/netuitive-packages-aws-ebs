@@ -23,28 +23,6 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.averagereadlatency",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumetotalreadtime}.actual / ${aws.ebs.volumereadops}.actual",
-            "0"
-          ],
-          "fqn": "netuitive.aws.ebs.averagereadlatency",
-          "name": "Average Read Latency"
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.averagewritelatency",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumetotalwritetime}.actual / ${aws.ebs.volumewriteops}.actual",
-            "0"
-          ],
-          "fqn": "netuitive.aws.ebs.averagewritelatency",
-          "name": "Average Write Latency"
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.iops",
         "properties": {
           "expressions": [
@@ -52,17 +30,6 @@
           ],
           "fqn": "netuitive.aws.ebs.iops",
           "name": "IOPS"
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.busypercent",
-        "properties": {
-          "expressions": [
-            "100 - ((${aws.ebs.volumeidletime}.actual / 300) * 100)",
-            "0"
-          ],
-          "fqn": "netuitive.aws.ebs.busypercent",
-          "name": "Busy Percent"
         }
       },
       {
@@ -79,26 +46,6 @@
           "expression": "Math.min(100, (!attribute['iops'].value ? (data['netuitive.aws.ebs.iops'].actual / 300) : (data['netuitive.aws.ebs.iops'].actual / attribute['iops'].value))*100)",
           "fqn": "netuitive.aws.ebs.iopsutilization",
           "name": "IOPS Utilization"
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.totalbytespersec",
-        "properties": {
-          "expressions": [
-            "(${aws.ebs.volumereadbytes}.actual + ${aws.ebs.volumewritebytes}.actual) / 300.0"
-          ],
-          "fqn": "netuitive.aws.ebs.totalbytespersec",
-          "name": "Total Bytes Per Second"
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.totalbytes",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumewritebytes}.actual + ${aws.ebs.volumereadbytes}.actual"
-          ],
-          "fqn": "netuitive.aws.ebs.totalbytes",
-          "name": "Total Bytes"
         }
       },
       {

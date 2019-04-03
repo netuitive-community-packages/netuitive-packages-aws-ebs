@@ -29,15 +29,6 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.busypercent",
-        "properties": {
-          "tags": {
-            "unit": "percent",
-            "utilization": true
-          }
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.iopsutilization",
         "properties": {
           "tags": {
@@ -93,14 +84,6 @@
         "match": "netuitive.aws.ebs.queuelengthdifferential",
         "properties": {
           "validMin": "null"
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.totalbytes",
-        "properties": {
-          "tags": {
-            "unit": "bytes"
-          }
         }
       },
       {

@@ -110,20 +110,6 @@
         "widgetType": "metric-time-series"
       },
       {
-        "id": "dbb82c0b-590c-4eb3-ace4-fbb64bd98487",
-        "name": "Busy Percent",
-        "properties": {
-          "metricLimit": "10",
-          "metric_fqn": "netuitive.aws.ebs.busypercent",
-          "selectedTab": "table",
-          "showElementTotal": "true",
-          "showHighest": "true",
-          "useElementNameContains": "true",
-          "width": "medium"
-        },
-        "widgetType": "metric-time-series"
-      },
-      {
         "id": "7d26a7fa-880b-4cec-899e-194bf1810b82",
         "name": "Tags",
         "properties": {
