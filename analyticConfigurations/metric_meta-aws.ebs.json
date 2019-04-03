@@ -134,22 +134,6 @@
             "unit": "iops"
           }
         }
-      },
-      {
-        "match": "netuitive.aws.ebs.readopspersec",
-        "properties": {
-          "tags": {
-            "unit": "rps"
-          }
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.writeopspersec",
-        "properties": {
-          "tags": {
-            "unit": "wps"
-          }
-        }
       }
     ],
     "name": "AWS EBS",

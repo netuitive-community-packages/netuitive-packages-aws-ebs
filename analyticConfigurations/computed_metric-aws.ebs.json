@@ -45,26 +45,6 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.readopspersec",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumereadops}.actual / 300.0"
-          ],
-          "fqn": "netuitive.aws.ebs.readopspersec",
-          "name": "Read Ops Per Second"
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.writeopspersec",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumewriteops}.actual / 300.0"
-          ],
-          "fqn": "netuitive.aws.ebs.writeopspersec",
-          "name": "Write Ops Per Second"
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.iops",
         "properties": {
           "expressions": [
