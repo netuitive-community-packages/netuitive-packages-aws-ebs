@@ -2,20 +2,10 @@
   "analyticConfiguration": {
     "metrics": [
       {
-        "match": "netuitive.aws.ebs.totalops",
-        "properties": {
-          "expressions": [
-            "${aws.ebs.volumereadops}.actual + ${aws.ebs.volumewriteops}.actual"
-          ],
-          "fqn": "netuitive.aws.ebs.totalops",
-          "name": "Total Ops"
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.averagelatency",
         "properties": {
           "expressions": [
-            "(${aws.ebs.volumetotalreadtime}.actual + ${aws.ebs.volumetotalwritetime}.actual) / ${netuitive.aws.ebs.totalops}.actual",
+            "(${aws.ebs.volumetotalreadtime}.actual + ${aws.ebs.volumetotalwritetime}.actual) / (${aws.ebs.volumereadops}.actual + ${aws.ebs.volumewriteops}.actual)",
             "0"
           ],
           "fqn": "netuitive.aws.ebs.averagelatency",
@@ -26,7 +16,7 @@
         "match": "netuitive.aws.ebs.iops",
         "properties": {
           "expressions": [
-            "${netuitive.aws.ebs.totalops}.actual / 300.0"
+            "(${aws.ebs.volumereadops}.actual + ${aws.ebs.volumewriteops}.actual) / 300.0"
           ],
           "fqn": "netuitive.aws.ebs.iops",
           "name": "IOPS"
@@ -51,7 +41,7 @@
       {
         "match": "netuitive.aws.ebs.busytimeiops",
         "properties": {
-          "expression": "(data['aws.ebs.volumeidletime'].actual >= 300) ? 0 : data['netuitive.aws.ebs.totalops'].actual / (300.0 - Math.floor(data['aws.ebs.volumeidletime'].actual))",
+          "expression": "(data['aws.ebs.volumeidletime'].actual >= 300) ? 0 : (data['aws.ebs.volumereadops'].actual + data['aws.ebs.volumewriteops'].actual) / (300.0 - Math.floor(data['aws.ebs.volumeidletime'].actual))",
           "fqn": "netuitive.aws.ebs.busytimeiops",
           "name": "Busy Time IOPS"
         }
