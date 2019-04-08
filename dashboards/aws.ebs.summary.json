@@ -12,11 +12,11 @@
     "widgets": [
       {
         "id": "3e21517d-e8d9-4363-a04d-a907394f4c36",
-        "name": "Top 5 Total Bytes per Second",
+        "name": "Top 5 Average Latency",
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "5",
-          "metric_fqn": "netuitive.aws.ebs.totalbytespersec",
+          "metric_fqn": "netuitive.aws.ebs.averagelatency",
           "selectedTab": "graph",
           "showElementTotal": "true",
           "showHighest": "true",
@@ -31,7 +31,7 @@
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "10",
-          "metrics": "[{\"fqn\":\"netuitive.aws.ebs.totalops\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.totalbytespersec\",\"aggFn\":\"sum\"}]",
+          "metrics": "[{\"fqn\":\"aws.ebs.volumequeuelength\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.queuelengthdifferential\",\"aggFn\":\"sum\"}]",
           "selectedAttributes": "[{\"name\":\"availabilityZone\"},{\"name\":\"region\"},{\"name\":\"size\"}]",
           "selectedTab": "table",
           "showElementTotal": "true",
@@ -61,12 +61,12 @@
       },
       {
         "id": "475ac827-d1b6-4c27-8097-048c95ebe63e",
-        "name": "Top 10 Total IOPS",
+        "name": "Top 10 IOPS",
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "10",
-          "metric_fqn": "netuitive.aws.ebs.totalops",
-          "selectedTab": "table",
+          "metric_fqn": "netuitive.aws.ebs.iops",
+          "selectedTab": "graph",
           "showElementTotal": "true",
           "showHighest": "true",
           "useElementNameContains": "true",
@@ -76,11 +76,11 @@
       },
       {
         "id": "ed74323e-3ea4-473c-8edf-d911cadd154a",
-        "name": "Top 10 Average Read Latency",
+        "name": "Top 10 Volume Total Read Time",
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "10",
-          "metric_fqn": "netuitive.aws.ebs.averagereadlatency",
+          "metric_fqn": "aws.ebs.volumetotalreadtime",
           "selectedTab": "graph",
           "showElementTotal": "true",
           "showHighest": "true",
@@ -91,12 +91,12 @@
       },
       {
         "id": "a5279ef8-b608-4d31-a421-c9b459a529fe",
-        "name": "Top 10 Average Write Latency",
+        "name": "Top 10 Volume Total Write Time",
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "10",
-          "metric_fqn": "netuitive.aws.ebs.averagewritelatency",
-          "selectedTab": "table",
+          "metric_fqn": "aws.ebs.volumetotalwritetime",
+          "selectedTab": "graph",
           "showElementTotal": "true",
           "showHighest": "true",
           "useElementNameContains": "true",
