@@ -1,7 +1,18 @@
 ## Release History
 
 ### Version next
-* Remove unused metrics: netuitive.aws.ebs.busytimebytespersecond, netuitive.aws.ebs.writebytespersec                         
+* Remove metrics: netuitive.aws.ebs.busytimebytespersecond
+                  netuitive.aws.ebs.writebytespersec
+                  netuitive.aws.ebs.readbytespersec
+                  netuitive.aws.ebs.busypercent
+                  netuitive.aws.ebs.writeopspersec
+                  netuitive.aws.ebs.readopspersec
+                  netuitive.aws.ebs.totalbytespersec
+                  netuitive.aws.ebs.totalops
+                  netuitive.aws.ebs.averagereadlatency
+                  netuitive.aws.ebs.averagewritelatency
+                  netuitive.aws.ebs.totalbytes
+* Replace deleted metrics with other ones in dashboards AWS EBS Summary AWS EBS Element Detail                          
 
 ### Version 1.7.0
 
