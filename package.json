@@ -28,6 +28,12 @@
       "encoding" : "application/json",
       "content" : null
     }
+  }, {
+    "data" : {
+      "file" : "policies/aws.ebs.-.elevated.queue.length.differential.with.critical.latency.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
   } ],
   "analyticConfigurations" : [ {
     "data" : {

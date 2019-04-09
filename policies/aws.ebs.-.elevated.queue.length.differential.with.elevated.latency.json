@@ -2,12 +2,11 @@
   "policy": {
     "actions": [
       {
-        "category": 3,
+        "category": 2,
         "type": "event"
       },
       {
         "enabled": true,
-        "id": 23513,
         "type": "notification"
       }
     ],
