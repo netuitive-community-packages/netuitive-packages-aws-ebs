@@ -129,7 +129,7 @@
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "10",
-          "metrics": "[{\"fqn\":\"aws.ebs.volumewriteops\",\"aggFns\":[]},{\"fqn\":\"aws.ebs.volumereadops\",\"aggFns\":[]}]",
+          "metrics": "[{\"fqn\":\"aws.ebs.volumewriteops\",\"aggFn\":\"sum\"},{\"fqn\":\"aws.ebs.volumereadops\",\"aggFn\":\"sum\"}]",
           "selectedTab": "table",
           "showElementTotal": "true",
           "showHighest": "true",
