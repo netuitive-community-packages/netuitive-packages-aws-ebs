@@ -31,7 +31,7 @@
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "10",
-          "metrics": "[{\"fqn\":\"aws.ebs.volumequeuelength\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.queuelengthdifferential\",\"aggFn\":\"sum\"}]",
+          "metrics": "[{\"fqn\":\"aws.ebs.volumequeuelength\",\"aggFn\":\"sum\"},{\"fqn\":\"netuitive.aws.ebs.queuelengthdifferential\",\"aggFn\":\"avg\"}]",
           "selectedAttributes": "[{\"name\":\"availabilityZone\"},{\"name\":\"region\"},{\"name\":\"size\"}]",
           "selectedTab": "table",
           "showElementTotal": "true",
