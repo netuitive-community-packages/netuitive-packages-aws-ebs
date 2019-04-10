@@ -37,21 +37,7 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.busypercent",
-        "properties": {
-          "baseline": true,
-          "correlation": true
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.iopsutilization",
-        "properties": {
-          "baseline": true,
-          "correlation": true
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.totalbytespersec",
         "properties": {
           "baseline": true,
           "correlation": true

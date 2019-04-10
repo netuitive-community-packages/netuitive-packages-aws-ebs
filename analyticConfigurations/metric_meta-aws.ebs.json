@@ -29,15 +29,6 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.busypercent",
-        "properties": {
-          "tags": {
-            "unit": "percent",
-            "utilization": true
-          }
-        }
-      },
-      {
         "match": "netuitive.aws.ebs.iopsutilization",
         "properties": {
           "tags": {
@@ -96,14 +87,6 @@
         }
       },
       {
-        "match": "netuitive.aws.ebs.totalbytes",
-        "properties": {
-          "tags": {
-            "unit": "bytes"
-          }
-        }
-      },
-      {
         "match": "aws.ebs.volumethroughputpercentage",
         "properties": {
           "tags": {
@@ -132,30 +115,6 @@
         "properties": {
           "tags": {
             "unit": "iops"
-          }
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.readopspersec",
-        "properties": {
-          "tags": {
-            "unit": "rps"
-          }
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.writeopspersec",
-        "properties": {
-          "tags": {
-            "unit": "wps"
-          }
-        }
-      },
-      {
-        "match": "netuitive.aws.ebs.busytimebytespersecond",
-        "properties": {
-          "tags": {
-            "unit": "Bps"
           }
         }
       }

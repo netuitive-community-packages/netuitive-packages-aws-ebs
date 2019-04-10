@@ -111,10 +111,10 @@
       },
       {
         "id": "dbb82c0b-590c-4eb3-ace4-fbb64bd98487",
-        "name": "Busy Percent",
+        "name": "Volume Queue Length",
         "properties": {
           "metricLimit": "10",
-          "metric_fqn": "netuitive.aws.ebs.busypercent",
+          "metric_fqn": "aws.ebs.volumequeuelength",
           "selectedTab": "table",
           "showElementTotal": "true",
           "showHighest": "true",
@@ -125,11 +125,11 @@
       },
       {
         "id": "b10784ea-2f4a-4d58-a8ee-a66d3c87124d",
-        "name": "Reads and Writes Per Second",
+        "name": "Read and Write Ops",
         "properties": {
           "elementScopeTypes": "[\"EBS\"]",
           "metricLimit": "10",
-          "metrics": "[{\"fqn\":\"netuitive.aws.ebs.writeopspersec\",\"aggFns\":[]},{\"fqn\":\"netuitive.aws.ebs.readopspersec\",\"aggFns\":[]}]",
+          "metrics": "[{\"fqn\":\"aws.ebs.volumewriteops\",\"aggFn\":\"sum\"},{\"fqn\":\"aws.ebs.volumereadops\",\"aggFn\":\"sum\"}]",
           "selectedTab": "table",
           "showElementTotal": "true",
           "showHighest": "true",
